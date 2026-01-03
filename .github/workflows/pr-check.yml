@@ -57,26 +57,22 @@ jobs:
         run: |
           # Get package info
           npm pack --dry-run 2>&1 | tee pack-output.txt
-          
+
           # Extract and display size
           SIZE_LINE=$(grep "unpacked size" pack-output.txt || echo "Size not found")
           echo "📦 $SIZE_LINE"
-          
+
           # Simple size check - just informational, don't fail
           echo "✅ Package built successfully"
-
-  dependency-review:
-    name: Dependency Review
-    runs-on: ubuntu-latest
-    # This job requires Dependency graph to be enabled in repo settings
-    # Skip if not available
-    continue-on-error: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Dependency Review
-        uses: actions/dependency-review-action@v4
-        with:
-          fail-on-severity: high
-          deny-licenses: GPL-3.0, AGPL-3.0
+  # Note: Dependency Review requires Dependency Graph to be enabled in repo settings
+  # Enable it at: Settings → Security & analysis → Dependency graph
+  # Then uncomment this job:
+  # dependency-review:
+  #   name: Dependency Review
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/dependency-review-action@v4
+  #       with:
+  #         fail-on-severity: high
+  #         deny-licenses: GPL-3.0, AGPL-3.0
