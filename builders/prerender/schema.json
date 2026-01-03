@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "BuilderPrerenderSchema",
+  "title": "Bun SSG Prerender Builder",
+  "description": "Prerender Angular routes to static HTML files",
+  "type": "object",
+  "properties": {
+    "browserTarget": {
+      "type": "string",
+      "description": "A browser builder target in the format of `project:target[:configuration]`.",
+      "pattern": "^[^:\\s]*:[^:\\s]*(:[^\\s]+)?$"
+    },
+    "routes": {
+      "type": "array",
+      "description": "Array of routes to prerender.",
+      "items": {
+        "type": "string"
+      },
+      "default": ["/"]
+    },
+    "routesFile": {
+      "type": "string",
+      "description": "Path to a file containing routes to prerender (one per line)."
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "Output directory for prerendered files."
+    },
+    "concurrency": {
+      "type": "number",
+      "description": "Number of concurrent renders.",
+      "default": 5
+    },
+    "generateSitemap": {
+      "type": "boolean",
+      "description": "Generate sitemap.xml file.",
+      "default": true
+    },
+    "baseUrl": {
+      "type": "string",
+      "description": "Base URL for sitemap generation."
+    },
+    "minify": {
+      "type": "boolean",
+      "description": "Minify HTML output.",
+      "default": false
+    },
+    "verbose": {
+      "type": "boolean",
+      "description": "Enable verbose logging.",
+      "default": false
+    }
+  },
+  "required": ["browserTarget"]
+}

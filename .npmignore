@@ -1,0 +1,39 @@
+# Source files
+src/
+schematics-src/
+builders-src/
+
+# Config files
+tsconfig*.json
+tsup.config.ts
+vitest.config.ts
+.eslintrc*
+.prettierrc*
+
+# Development files
+*.map
+.git/
+.github/
+.vscode/
+.idea/
+.cursor/
+
+# Test files
+**/*.spec.ts
+**/*.test.ts
+coverage/
+.nyc_output/
+
+# Build artifacts not needed
+node_modules/
+bun.lock
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Misc
+*.log
+.DS_Store
+.env*
+CONTRIBUTING.md
+FUNDING.yml

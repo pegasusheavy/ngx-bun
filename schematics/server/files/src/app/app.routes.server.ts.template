@@ -1,0 +1,16 @@
+import { RenderMode, ServerRoute } from '@angular/ssr';
+
+/**
+ * Server-side routing configuration
+ *
+ * Define how each route should be rendered:
+ * - RenderMode.Server: Server-side rendering (default)
+ * - RenderMode.Client: Client-side only (no SSR)
+ * - RenderMode.Prerender: Static site generation (build-time)
+ */
+export const serverRoutes: ServerRoute[] = [
+  {
+    path: '**',
+    renderMode: RenderMode.Server,
+  },
+];

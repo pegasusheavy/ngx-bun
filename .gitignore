@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+schematics/**/*.js
+schematics/**/*.js.map
+schematics/**/*.d.ts
+builders/serve/index.js
+builders/serve/index.d.ts
+builders/serve/*.map
+builders/prerender/index.js
+builders/prerender/index.d.ts
+builders/prerender/*.map
+
+# Keep schema files
+!schematics/**/schema.json
+!builders/**/schema.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.tgz
+.npmrc

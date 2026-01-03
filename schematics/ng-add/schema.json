@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "SchematicsNgAdd",
+  "title": "ng-add schematic options",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project to add SSR to.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "port": {
+      "type": "number",
+      "description": "The port for the SSR server.",
+      "default": 4000
+    },
+    "skipInstall": {
+      "type": "boolean",
+      "description": "Skip package installation.",
+      "default": false
+    },
+    "serverFileName": {
+      "type": "string",
+      "description": "Name of the server file.",
+      "default": "server.ts"
+    }
+  },
+  "required": []
+}

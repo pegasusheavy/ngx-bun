@@ -1,0 +1,101 @@
+{
+  "name": "@pegasusheavy/ngx-bun",
+  "version": "0.1.0",
+  "description": "Bun SSR/SSG adapter for Angular 19+ applications",
+  "keywords": [
+    "angular",
+    "bun",
+    "ssr",
+    "ssg",
+    "server-side-rendering",
+    "static-site-generation",
+    "angular-ssr",
+    "angular-19",
+    "angular-universal"
+  ],
+  "author": "Pegasus Heavy Industries",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PegasusHeavyIndustries/ngx-bun.git"
+  },
+  "homepage": "https://github.com/PegasusHeavyIndustries/ngx-bun#readme",
+  "bugs": {
+    "url": "https://github.com/PegasusHeavyIndustries/ngx-bun/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "schematics",
+    "builders",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js"
+    },
+    "./prerender": {
+      "types": "./dist/prerender/index.d.ts",
+      "import": "./dist/prerender/index.mjs",
+      "require": "./dist/prerender/index.js"
+    }
+  },
+  "schematics": "./schematics/collection.json",
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "builders": "./builders/builders.json",
+  "scripts": {
+    "build": "tsup",
+    "build:schematics": "tsc -p tsconfig.schematics.json && cp -r schematics-src/server/files schematics/server/",
+    "build:builders": "tsc -p tsconfig.builders.json",
+    "build:all": "bun run build && bun run build:schematics && bun run build:builders",
+    "test": "vitest",
+    "lint": "eslint src schematics-src builders-src",
+    "clean": "rm -rf dist schematics/*.js schematics/**/*.js builders/**/*.js",
+    "prepublishOnly": "bun run build:all"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=19.0.0",
+    "@angular/core": ">=19.0.0",
+    "@angular/platform-server": ">=19.0.0",
+    "@angular/ssr": ">=19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/ssr": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "@angular-devkit/architect": "^0.1900.0",
+    "@angular-devkit/core": "^19.0.0",
+    "@angular-devkit/schematics": "^19.0.0",
+    "@schematics/angular": "^19.0.0",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "~5.6.3",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "bun": ">=1.0.0"
+  },
+  "packageManager": "pnpm@10.26.2"
+}

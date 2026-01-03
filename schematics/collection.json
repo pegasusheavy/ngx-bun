@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add @pegasusheavy/ngx-bun SSR adapter to an Angular project",
+      "factory": "./ng-add/index#ngAdd",
+      "schema": "./ng-add/schema.json",
+      "aliases": ["add"]
+    },
+    "server": {
+      "description": "Generate a Bun SSR server file",
+      "factory": "./server/index#server",
+      "schema": "./server/schema.json"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../node_modules/@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "serve": {
+      "implementation": "./serve/index",
+      "schema": "./serve/schema.json",
+      "description": "Serve an Angular application with Bun SSR"
+    },
+    "prerender": {
+      "implementation": "./prerender/index",
+      "schema": "./prerender/schema.json",
+      "description": "Prerender Angular routes to static HTML files"
+    }
+  }
+}

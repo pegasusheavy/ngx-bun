@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "./builders",
+    "rootDir": "./builders-src",
+    "baseUrl": ".",
+    "paths": {
+      "@pegasusheavy/ngx-bun": ["./dist/index"],
+      "@pegasusheavy/ngx-bun/*": ["./dist/*"]
+    }
+  },
+  "include": ["builders-src/**/*"],
+  "exclude": ["node_modules"]
+}
