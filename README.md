@@ -419,9 +419,9 @@ MIT © [Pegasus Heavy Industries](https://github.com/PegasusHeavyIndustries)
 
 ## Support
 
-- 📖 [Documentation](https://github.com/PegasusHeavyIndustries/ngx-bun#readme)
-- 🐛 [Issue Tracker](https://github.com/PegasusHeavyIndustries/ngx-bun/issues)
-- 💬 [Discussions](https://github.com/PegasusHeavyIndustries/ngx-bun/discussions)
+- 📖 [Documentation](https://github.com/quinnjr/ngx-bun#readme)
+- 🐛 [Issue Tracker](https://github.com/quinnjr/ngx-bun/issues)
+- 💬 [Discussions](https://github.com/quinnjr/ngx-bun/discussions)
 
 ---
 
