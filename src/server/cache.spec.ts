@@ -33,10 +33,10 @@ describe('LRUCache', () => {
     cache.set('key1', 'value1');
     cache.set('key2', 'value2');
     cache.set('key3', 'value3');
-    
+
     // Access key1 to make it recently used
     cache.get('key1');
-    
+
     // Add key4, should evict key2 (now LRU)
     cache.set('key4', 'value4');
 
@@ -64,7 +64,7 @@ describe('LRUCache', () => {
   it('should delete specific keys', () => {
     cache.set('key1', 'value1');
     cache.set('key2', 'value2');
-    
+
     expect(cache.delete('key1')).toBe(true);
     expect(cache.get('key1')).toBeUndefined();
     expect(cache.get('key2')).toBe('value2');

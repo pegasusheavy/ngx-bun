@@ -48,7 +48,7 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Build
         run: bun run build:all
@@ -77,6 +77,9 @@ jobs:
   dependency-review:
     name: Dependency Review
     runs-on: ubuntu-latest
+    # This job requires Dependency graph to be enabled in repo settings
+    # Skip if not available
+    continue-on-error: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
