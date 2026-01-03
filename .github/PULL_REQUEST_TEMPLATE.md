@@ -35,9 +35,9 @@ Fixes #
 
 <!-- Describe how reviewers can test your changes -->
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## Screenshots (if applicable)
 

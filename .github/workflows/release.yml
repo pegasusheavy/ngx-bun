@@ -146,13 +146,13 @@ jobs:
         run: |
           # Get the previous tag
           PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-          
+
           if [ -z "$PREV_TAG" ]; then
             CHANGELOG=$(git log --pretty=format:"- %s (%h)" HEAD)
           else
             CHANGELOG=$(git log --pretty=format:"- %s (%h)" ${PREV_TAG}..HEAD)
           fi
-          
+
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -164,23 +164,23 @@ jobs:
           name: v${{ needs.validate.outputs.version }}
           body: |
             ## What's Changed
-            
+
             ${{ steps.changelog.outputs.changelog }}
-            
+
             ## Installation
-            
+
             ```bash
             ng add @pegasusheavy/ngx-bun
             ```
-            
+
             Or manually:
-            
+
             ```bash
             npm install @pegasusheavy/ngx-bun
             ```
-            
+
             ## Documentation
-            
+
             See the [README](https://github.com/pegasusheavy/ngx-bun#readme) for full documentation.
           draft: false
           prerelease: ${{ inputs.prerelease || false }}

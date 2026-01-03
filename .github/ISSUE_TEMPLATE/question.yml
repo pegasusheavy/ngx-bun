@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
         Have a question? We're here to help! Please provide as much context as possible.
-        
+
         > **Note**: For general discussions, consider using [GitHub Discussions](https://github.com/pegasusheavy/ngx-bun/discussions) instead.
 
   - type: checkboxes
@@ -56,7 +56,7 @@ body:
       description: Provide any relevant context or code examples
       placeholder: |
         Here's what I'm trying to do...
-        
+
         ```typescript
         // relevant code
         ```

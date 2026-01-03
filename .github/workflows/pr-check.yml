@@ -57,18 +57,18 @@ jobs:
         run: |
           SIZE=$(npm pack --dry-run 2>&1 | grep "unpacked size" | awk '{print $NF}')
           echo "📦 Package size: $SIZE"
-          
+
           # Extract numeric value (assuming KB or MB)
           VALUE=$(echo $SIZE | grep -oP '[0-9.]+')
           UNIT=$(echo $SIZE | grep -oP '[A-Za-z]+')
-          
+
           # Convert to KB for comparison
           if [ "$UNIT" = "MB" ]; then
             VALUE_KB=$(echo "$VALUE * 1024" | bc)
           else
             VALUE_KB=$VALUE
           fi
-          
+
           # Warn if over 1MB
           if (( $(echo "$VALUE_KB > 1024" | bc -l) )); then
             echo "⚠️ Warning: Package size exceeds 1MB"
