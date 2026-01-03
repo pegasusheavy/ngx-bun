@@ -80,7 +80,7 @@
     }
   },
   "dependencies": {
-    "@angular-devkit/architect": "^0.1900.0",
+    "@angular-devkit/architect": "^0.2100.4",
     "@angular-devkit/core": "^19.0.0",
     "@angular-devkit/schematics": "^19.0.0",
     "@schematics/angular": "^19.0.0",
