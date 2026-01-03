@@ -415,13 +415,13 @@ Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md)
 
 ## License
 
-MIT © [Pegasus Heavy Industries](https://github.com/PegasusHeavyIndustries)
+MIT © [Pegasus Heavy Industries](https://github.com/pegasusheavy)
 
 ## Support
 
-- 📖 [Documentation](https://github.com/quinnjr/ngx-bun#readme)
-- 🐛 [Issue Tracker](https://github.com/quinnjr/ngx-bun/issues)
-- 💬 [Discussions](https://github.com/quinnjr/ngx-bun/discussions)
+- 📖 [Documentation](https://github.com/pegasusheavy/ngx-bun#readme)
+- 🐛 [Issue Tracker](https://github.com/pegasusheavy/ngx-bun/issues)
+- 💬 [Discussions](https://github.com/pegasusheavy/ngx-bun/discussions)
 
 ---
 

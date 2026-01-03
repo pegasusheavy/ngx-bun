@@ -17,11 +17,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quinnjr/ngx-bun.git"
+    "url": "git+https://github.com/pegasusheavy/ngx-bun.git"
   },
-  "homepage": "https://github.com/quinnjr/ngx-bun#readme",
+  "homepage": "https://github.com/pegasusheavy/ngx-bun#readme",
   "bugs": {
-    "url": "https://github.com/quinnjr/ngx-bun/issues"
+    "url": "https://github.com/pegasusheavy/ngx-bun/issues"
   },
   "publishConfig": {
     "access": "public"
