@@ -1,0 +1,81 @@
+name: ❓ Question
+description: Ask a question about usage or implementation
+title: "[Question]: "
+labels: ["question"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're here to help! Please provide as much context as possible.
+        
+        > **Note**: For general discussions, consider using [GitHub Discussions](https://github.com/pegasusheavy/ngx-bun/discussions) instead.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before asking
+      options:
+        - label: I have read the [documentation](https://github.com/pegasusheavy/ngx-bun#readme)
+          required: true
+        - label: I have searched existing issues and discussions
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What is your question about?
+      options:
+        - Installation / Setup
+        - Configuration
+        - SSR (Server-Side Rendering)
+        - SSG (Static Site Generation)
+        - Performance
+        - Angular CLI integration
+        - Deployment
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: How do I...?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide any relevant context or code examples
+      placeholder: |
+        Here's what I'm trying to do...
+        
+        ```typescript
+        // relevant code
+        ```
+
+  - type: textarea
+    id: attempts
+    attributes:
+      label: What I've Tried
+      description: What have you already tried or researched?
+      placeholder: I've tried...
+
+  - type: input
+    id: ngx-bun-version
+    attributes:
+      label: "@pegasusheavy/ngx-bun Version"
+      placeholder: "0.1.0"
+
+  - type: input
+    id: angular-version
+    attributes:
+      label: Angular Version
+      placeholder: "19.0.0"

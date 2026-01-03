@@ -1,0 +1,20 @@
+# Default owners for everything in the repo
+* @quinnjr
+
+# Core library
+/src/ @quinnjr
+
+# Schematics
+/schematics-src/ @quinnjr
+/schematics/ @quinnjr
+
+# Builders
+/builders-src/ @quinnjr
+/builders/ @quinnjr
+
+# CI/CD
+/.github/workflows/ @quinnjr
+
+# Documentation
+/README.md @quinnjr
+/CONTRIBUTING.md @quinnjr
